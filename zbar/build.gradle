@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 ext {
     isLibrary = true
@@ -9,7 +10,6 @@ ext {
 }
 
 dependencies {
-    //compile project(":core")
-    compile 'me.dm7.barcodescanner:core:1.8.4'
+    compile project(":core")
     compile fileTree(dir: 'libs', include: '*.jar')
 }
